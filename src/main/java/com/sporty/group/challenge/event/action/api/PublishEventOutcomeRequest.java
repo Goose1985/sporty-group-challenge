@@ -1,4 +1,4 @@
-package com.sporty.group.challenge.api;
+package com.sporty.group.challenge.event.action.api;
 
 public record PublishEventOutcomeRequest(
         String eventId,

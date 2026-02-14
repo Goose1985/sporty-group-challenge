@@ -1,4 +1,4 @@
-package com.sporty.group.challenge.domain;
+package com.sporty.group.challenge.event.action.domain;
 
 /**
  * Modelo de dominio: el outcome de un evento deportivo.

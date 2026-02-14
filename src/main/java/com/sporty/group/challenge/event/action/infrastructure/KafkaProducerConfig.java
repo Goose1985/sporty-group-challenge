@@ -1,6 +1,6 @@
-package com.sporty.group.challenge.infrastructure;
+package com.sporty.group.challenge.event.action.infrastructure;
 
-import com.sporty.group.challenge.domain.EventOutcome;
+import com.sporty.group.challenge.event.action.domain.EventOutcome;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;

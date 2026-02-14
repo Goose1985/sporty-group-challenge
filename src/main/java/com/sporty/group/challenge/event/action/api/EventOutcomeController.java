@@ -1,7 +1,7 @@
-package com.sporty.group.challenge.api;
+package com.sporty.group.challenge.event.action.api;
 
-import com.sporty.group.challenge.action.PublishEventOutcomeUseCase;
-import com.sporty.group.challenge.domain.EventOutcome;
+import com.sporty.group.challenge.event.action.PublishEventOutcomeUseCase;
+import com.sporty.group.challenge.event.action.domain.EventOutcome;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

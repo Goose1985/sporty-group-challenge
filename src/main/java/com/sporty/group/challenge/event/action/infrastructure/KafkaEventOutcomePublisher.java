@@ -1,7 +1,7 @@
-package com.sporty.group.challenge.infrastructure;
+package com.sporty.group.challenge.event.action.infrastructure;
 
-import com.sporty.group.challenge.domain.EventOutcome;
-import com.sporty.group.challenge.domain.EventOutcomePublisher;
+import com.sporty.group.challenge.event.action.domain.EventOutcome;
+import com.sporty.group.challenge.event.action.domain.EventOutcomePublisher;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
