@@ -1,9 +1,11 @@
 package com.sporty.group.challenge.event.action.api;
 
 import com.sporty.group.challenge.event.action.PublishEventOutcomeUseCase;
-import com.sporty.group.challenge.event.action.domain.EventOutcome;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/event-outcomes")
