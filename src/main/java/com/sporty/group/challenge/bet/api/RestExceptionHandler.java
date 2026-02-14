@@ -24,7 +24,6 @@ public class RestExceptionHandler {
     ProblemDetail handleMissingRequestParam(MissingServletRequestParameterException ex) {
         var pd = ProblemDetail.forStatus(HttpStatus.BAD_REQUEST);
         pd.setTitle("Invalid request");
-        // sin detalles extra del framework:
         pd.setDetail("Query parameter 'eventId' is required.");
         return pd;
     }
