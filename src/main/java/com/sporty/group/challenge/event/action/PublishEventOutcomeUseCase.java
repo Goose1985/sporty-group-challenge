@@ -13,7 +13,7 @@ public class PublishEventOutcomeUseCase {
         this.publisher = publisher;
     }
 
-    public void publish(EventOutcome eventOutcome) {
-        publisher.publish(eventOutcome);
+    public void publish(String eventId, String eventName, String eventWinnerId) {
+        publisher.publish(new EventOutcome(eventId, eventName, eventWinnerId));
     }
 }

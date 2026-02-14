@@ -17,11 +17,11 @@ public class EventOutcomeController {
 
     @PostMapping
     public ResponseEntity<Void> publish(@RequestBody PublishEventOutcomeRequest request) {
-        useCase.publish(new EventOutcome(
+        useCase.publish(
                 request.eventId(),
                 request.eventName(),
                 request.eventWinnerId()
-        ));
+        );
         return ResponseEntity.accepted().build();
     }
 }
