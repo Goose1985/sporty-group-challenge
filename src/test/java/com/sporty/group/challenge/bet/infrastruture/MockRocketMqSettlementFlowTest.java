@@ -47,8 +47,6 @@ class MockRocketMqSettlementFlowTest {
         assertThat(ledger.findByBetId("bet-1")).contains(SettlementResult.WON);
     }
 
-    // --- Fakes (test-only), dependen solo de interfaces ---
-
     private static final class FakeBus implements BetSettlementMessageBus {
         private final ConcurrentHashMap<String, CopyOnWriteArrayList<Consumer<BetSettlementMessage>>> subs =
                 new ConcurrentHashMap<>();

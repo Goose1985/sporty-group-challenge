@@ -48,9 +48,9 @@ class SportEventOutcomeKafkaConsumerTest {
         consumer.onMessage(new SportEventOutcome("event-100", "A vs B", "winner-10"));
 
         assertThat(published).hasSize(1);
-        assertThat(published.get(0).betId()).isEqualTo("bet-1");
-        assertThat(published.get(0).eventId()).isEqualTo("event-100");
-        assertThat(published.get(0).outcomeEventWinnerId()).isEqualTo("winner-10");
+        assertThat(published.getFirst().betId()).isEqualTo("bet-1");
+        assertThat(published.getFirst().eventId()).isEqualTo("event-100");
+        assertThat(published.getFirst().outcomeEventWinnerId()).isEqualTo("winner-10");
     }
 
     @Test

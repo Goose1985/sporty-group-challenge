@@ -19,7 +19,7 @@ public class SettleBetSettlementUseCase {
         this.ledger = ledger;
     }
 
-    public SettlementResult settle(BetSettlementMessage message) {
+    public void settle(BetSettlementMessage message) {
         var result = message.betEventWinnerId().equals(message.outcomeEventWinnerId())
                 ? SettlementResult.WON
                 : SettlementResult.LOST;
@@ -29,6 +29,5 @@ public class SettleBetSettlementUseCase {
         log.info("Settled betId={} result={} eventId={} betWinner={} outcomeWinner={}",
                 message.betId(), result, message.eventId(), message.betEventWinnerId(), message.outcomeEventWinnerId());
 
-        return result;
     }
 }
