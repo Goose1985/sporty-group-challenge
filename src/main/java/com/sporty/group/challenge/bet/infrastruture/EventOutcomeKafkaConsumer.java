@@ -3,7 +3,7 @@ package com.sporty.group.challenge.bet.infrastruture;
 import com.sporty.group.challenge.bet.domain.BetRepository;
 import com.sporty.group.challenge.bet.domain.BetSettlementMessage;
 import com.sporty.group.challenge.bet.domain.BetSettlementPublisher;
-import com.sporty.group.challenge.event.action.domain.EventOutcome;
+import com.sporty.group.challenge.event.action.domain.SportEventOutcome;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +19,7 @@ public class EventOutcomeKafkaConsumer {
     }
 
     @KafkaListener(topics = "event-outcomes", groupId = "sporty-group-challenge")
-    public void onMessage(EventOutcome outcome) {
+    public void onMessage(SportEventOutcome outcome) {
         var bets = betRepository.findByEventId(outcome.eventId());
 
         for (var bet : bets) {

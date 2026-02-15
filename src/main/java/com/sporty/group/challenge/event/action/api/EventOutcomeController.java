@@ -1,6 +1,6 @@
 package com.sporty.group.challenge.event.action.api;
 
-import com.sporty.group.challenge.event.action.PublishEventOutcomeUseCase;
+import com.sporty.group.challenge.event.action.PublishSportEvent;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/event-outcomes")
 public class EventOutcomeController {
 
-    private final PublishEventOutcomeUseCase useCase;
+    private final PublishSportEvent useCase;
 
-    public EventOutcomeController(PublishEventOutcomeUseCase useCase) {
+    public EventOutcomeController(PublishSportEvent useCase) {
         this.useCase = useCase;
     }
 
     @PostMapping
-    public ResponseEntity<Void> publish(@RequestBody PublishEventOutcomeRequest request) {
+    public ResponseEntity<Void> publish(@RequestBody PublishSportEventOutcomeRequest request) {
         useCase.publish(
                 request.eventId(),
                 request.eventName(),

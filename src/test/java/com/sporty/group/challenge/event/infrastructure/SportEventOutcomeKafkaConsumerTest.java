@@ -3,7 +3,7 @@ package com.sporty.group.challenge.event.infrastructure;
 import com.sporty.group.challenge.bet.domain.*;
 import com.sporty.group.challenge.bet.infrastruture.EventOutcomeKafkaConsumer;
 import com.sporty.group.challenge.bet.infrastruture.InMemoryBetRepository;
-import com.sporty.group.challenge.event.action.domain.EventOutcome;
+import com.sporty.group.challenge.event.action.domain.SportEventOutcome;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class EventOutcomeKafkaConsumerTest {
+class SportEventOutcomeKafkaConsumerTest {
 
     private BetRepository betRepository;
 
@@ -45,7 +45,7 @@ class EventOutcomeKafkaConsumerTest {
 
         var consumer = new EventOutcomeKafkaConsumer(betRepository, publisher);
 
-        consumer.onMessage(new EventOutcome("event-100", "A vs B", "winner-10"));
+        consumer.onMessage(new SportEventOutcome("event-100", "A vs B", "winner-10"));
 
         assertThat(published).hasSize(1);
         assertThat(published.get(0).betId()).isEqualTo("bet-1");
@@ -61,7 +61,7 @@ class EventOutcomeKafkaConsumerTest {
 
         var consumer = new EventOutcomeKafkaConsumer(repo, publisher);
 
-        consumer.onMessage(new EventOutcome("event-x", "X vs Y", "winner-x"));
+        consumer.onMessage(new SportEventOutcome("event-x", "X vs Y", "winner-x"));
 
         assertThat(published).isEmpty();
     }
