@@ -1,8 +1,8 @@
 package com.sporty.group.challenge.event.infrastructure;
 
 import com.sporty.group.challenge.bet.domain.*;
-import com.sporty.group.challenge.bet.infrastruture.EventOutcomeKafkaConsumer;
-import com.sporty.group.challenge.bet.infrastruture.InMemoryBetRepository;
+import com.sporty.group.challenge.bet.infrastructure.EventOutcomeKafkaConsumer;
+import com.sporty.group.challenge.bet.infrastructure.InMemoryBetRepository;
 import com.sporty.group.challenge.event.action.domain.SportEventOutcome;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

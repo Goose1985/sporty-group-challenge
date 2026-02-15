@@ -1,4 +1,4 @@
-package com.sporty.group.challenge.bet.infrastruture;
+package com.sporty.group.challenge.bet.infrastructure;
 
 import com.sporty.group.challenge.bet.domain.BetSettlementLedger;
 import com.sporty.group.challenge.bet.domain.SettlementResult;

@@ -1,4 +1,4 @@
-package com.sporty.group.challenge.bet.infrastruture;
+package com.sporty.group.challenge.bet.infrastructure;
 
 import com.sporty.group.challenge.bet.domain.Bet;
 import com.sporty.group.challenge.bet.domain.BetRepository;

@@ -5,6 +5,8 @@ import com.sporty.group.challenge.bet.domain.BetSettlementLedger;
 import com.sporty.group.challenge.bet.domain.BetSettlementMessage;
 import com.sporty.group.challenge.bet.domain.BetSettlementMessageBus;
 import com.sporty.group.challenge.bet.domain.SettlementResult;
+import com.sporty.group.challenge.bet.infrastructure.MockRocketMqBetSettlementConsumer;
+import com.sporty.group.challenge.bet.infrastructure.MockRocketMqBetSettlementPublisher;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
